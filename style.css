@@ -1,0 +1,286 @@
+@import url(http://fonts.googleapis.com/css?family=Inter|Fraunces);
+/*
+Theme Name: Vero simple 
+Theme URI: https://github.com/veronisab/vero-simple-wptheme
+Author: Veronica Ulrikkeholm
+Author URI: http://veronisab.github.io
+Description: A super simple theme making it easy to create websites for small clients.
+Version: 1.0
+*/
+
+
+/* color variables */
+:root {
+  --main-color: var(--pink); /* changes the main accent color */
+  --pink: #D26890;
+  --red:#d10000;
+  --orange:#fe6847;
+  --yellow:#ffbf00;
+  --darkgreen:#628B48;
+  --lightgreen:#6AB547;
+  --lightblue:#97D0E6;
+  --darkblue:#16324f;
+  --darkpurple:#610F7F;
+  --lightpurple:#d098db;
+  --gray: #ddd;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ddd;
+  height: 100vh;
+  max-width: 100%;
+  font-family: Inter, sans-serif;
+  line-height: 2rem;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: "Fraunces", serif;
+}
+h1 {
+  font-size: 50pt;
+  line-height: 50pt;
+}
+
+article h1 {
+  margin: 0;
+}
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 0.7em;
+  line-height: 1.5em;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  overflow: auto;
+  max-width: 100%;
+  box-shadow: 0 3px 5px #ddd inset;
+}
+/* Links */
+a {
+  color: var(--main-color);
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: var(--darkblue);
+}
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+/* Header */
+
+header {
+  background: transparent;
+  margin-bottom: 40px;
+}
+
+header .gravatar {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0;
+  float: right;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 100vw;
+}
+
+header nav a {
+  font-size: 1.3em;
+  margin: 20px;
+  padding: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+/* containers */
+main {
+  margin: 0;
+}
+
+.sticky {
+	position: fixed;
+	top: 40px;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content {
+  margin: 30px 300px;
+  padding: 30px;
+  height: 100vh;
+}
+
+footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.post-meta {
+  background-color: #fff;
+  font-size: 0.7em;
+  padding: 5px 10px;
+  margin: 0px -10px;
+}
+
+/* Pagination */
+#pagination {
+  margin-bottom: 40px;
+  width: 100%;
+}
+#pagination .past-page {
+  float: right;
+  width: 49%;
+  text-align:right;
+}
+#pagination .next-page {
+  float: left;
+  width: 50%;
+  border-right: 1px solid #ccc;
+  height: 200px;
+}
+.next-page a, .past-page a {
+  font-size: 2em;
+  font-family: "Quicksand", Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  padding: 10%;
+}
+/* Comments */
+h3#comments {
+  margin-bottom: 60px;
+}
+.commentlist {
+  list-style: none;
+  margin: 0;
+}
+.commentlist .comment {
+  padding: 20px;
+  position: relative;
+  list-style: none;
+}
+.comment:nth-child(1) {
+  background-color: #ccc;
+}
+.commentlist .comment-author {
+  float: left;
+  margin-right: 10px;
+}
+.commentlist .comment-author img {
+ display: none;
+}
+.commentlist .comment-author .says {
+  display: none;
+}
+.comment-meta {
+  font-size: 12px;
+}
+.comment-subscription-form,
+.comment-subscription-form {
+  margin-bottom: 0;
+}
+
+/* Misc  */
+.meta li {
+ list-style: none;
+}
+.light {
+  color: #fff;
+}
+.textshadow {
+  text-shadow: #111 1px 0 10px;;
+}
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.clear {
+  clear: both;
+}
+/* clear floats */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+
+ /* MEDIA QUERIES */
+
+@media only screen and (max-width: 800px) {
+.homepage {
+  background: url(bg-m.jpg);
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+}
+
+.content {
+  margin: 20px;
+}
+}
